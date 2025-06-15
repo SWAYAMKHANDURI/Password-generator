@@ -24,9 +24,10 @@ function App() {
       pass += chars.charAt(Math.floor(Math.random() * chars.length));
     }
     return pass;
+
   }, [charActive, numberActive, length]);
 
-  // Generate password on mount and when options change
+  
   const handleGenerate = () => {
     setOptions(prev => ({ ...prev, password: generatePassword(), copied: false }));
   };
